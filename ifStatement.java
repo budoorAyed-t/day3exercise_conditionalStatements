@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -53,9 +54,9 @@ public class ifStatement {
         //3.Write a Java program that generates an integer between 1 and 7
         //and displays the name of the weekday. 5
 
-        System.out.println("Display the name of the weekday corresponding to the entered number");
-        System.out.print("Enter a number between 1 to 7: ");
-        int weekdayNum = input.nextInt();
+        System.out.println("Display the name of the weekday corresponding to a randomly generated integer between 1 and 7.");
+        int weekdayNum = (int) (Math.random()*7)+1;
+        System.out.println("Random number = " + weekdayNum);
 
         switch(weekdayNum) {
             case 1:
@@ -79,8 +80,6 @@ public class ifStatement {
             case 7:
                 System.out.print("Saturday");
                 break;
-            default:
-                System.out.print("invalid input");
         }
         System.out.print("\n\n");
 
@@ -131,7 +130,7 @@ public class ifStatement {
         if(age < 13 && age > 0){
             System.out.print("You are a child");
         }
-        else if(age > 13 && age <=19){
+        else if(age >= 13 && age <=19){
             System.out.print("You are a teenager");
         }
         else if(age > 19 && age <= 130){
